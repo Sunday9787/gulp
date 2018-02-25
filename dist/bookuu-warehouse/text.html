@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_375929_ilwmdcm04fgvi.css">
+	<title>Document</title>
+	<style>
+		body,html {
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+		}
+    /*table*/
+
+    .table {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+
+    .thead {
+      display: table-header-group;
+    }
+
+    .tbody {
+      display: table-row-group
+    }
+
+    .tfoot {
+      display: table-footer-group;
+    }
+
+    .tr {
+      display: table-row;
+    }
+
+    .td,
+    .th,
+    .th-c,
+    .th-r,
+    .td-c,
+    .td-r {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .td-c,
+    .th-c {
+      text-align: center;
+    }
+
+    .td-r,
+    .th-r {
+      text-align: right;
+    }
+	</style>
+</head>
+<body>
+	<p class="iconfont icon-checkbox-checked"></p>
+	<span class="iconfont icon-round"></span>
+  <span class="iconfont icon-search"></span>
+  <form class="radiobox" action="javascript:;" method="post">
+  	<table>
+  		<tr>
+  			<td><label>选择<input type="radio" name="food" id=""></label></td>
+  		</tr>
+  		<tr>
+  			<td><label>选择<input type="radio" name="food" id=""></label></td>
+  		</tr>
+  		<tr>
+  			<td><label>选择<input type="radio" name="food" id=""></label></td>
+  		</tr>
+		</table>
+		<p class="ta-ct">666</p>
+	</form>
+	<table width="100%">
+		<tbody>
+			<tr>
+				<td align="center"><span class="iconfont icon-user-phone"></span></td>
+			</tr>
+		</tbody>
+	</table>
+  <div class="table" style="height:100%;width:100%;">
+    <div class="td-c">
+      6666
+    </div>
+  </div>
+<script>
+	document.getElementsByClassName('radiobox')[0].addEventListener('click',function(){
+		var e = window.event || event;
+		var elment = e.target || e.srcElement;
+		console.log(e.target.nodeName.toLocaleLowerCase());
+		if(elment.nodeName.toLocaleLowerCase() === "input") {
+				// for(var i =0; i<inputs.length; i ++) {
+
+	// }
+		}
+	},false)
+  window.onload=function(e) {
+    console.log(e)
+  }
+  document.addEventListener('touchstart',function(e) {
+    console.log(e)
+  })
+  for(var e in event) {
+    console.log(e + "-------" + event[e])
+  }
+	// var inputs = document.getElementsByTagName('input');
+	// for(var i =0; i<inputs.length; i ++) {
+
+	// }
+</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/module.css">
+    <link rel="stylesheet" type="text/css" href="../css/component.css">
+    <script src="../js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/compontent.js" type="text/javascript" charset="utf-8"></script>
+    <!--[if lte IE 8]><script src="../lib/html5.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../lib/respond.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../lib/css3-mediaqueries.min.js" type="text/javascript" charset="utf-8"></script><![endif]-->
+    <title>订单管理-退包订单-退包查询</title>
+  </head>
+
+  <body>
+    <div class="main clearfix">
+      <!-- 头部导航 -->
+      <nav class="navbar clearfix">
+        <div class="navbar-header">仓储管理系统</div>
+        <ul class="mainbav">
+          <li class="item active">
+            <a href="javascript:;">订单管理</a>
+          </li>
+          <li class="item">
+            <a href="javascript:;">仓库管理</a>
+          </li>
+          <li class="item">
+            <a href="javascript:;">统计报表</a>
+          </li>
+          <li class="item">
+            <a href="javascript:;">基本信息</a>
+          </li>
+          <li class="clear"></li>
+        </ul>
+        <div class="nav-user dropdown">
+          <a class="dropdown-toggle" data-type="click" role="button" href="javascript:;">神机网络</a>
+          <ul class="dropdown-menu">
+            <li class="item">
+              <a href="javascript:;">帮助中心</a>
+            </li>
+            <li class="item">
+              <a href="javascript:;">退出登陆</a>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </nav>
+      <!-- 侧边栏菜单 -->
+      <div class="sidebar-left">
+        <menu>
+          <ul class="sidebar-left-menu">
+            <li class="item active">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe603;</span>&nbsp;订单处理&nbsp;<span class="icon-arrow-right">&#xe60e;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item active">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe612;</span>&nbsp;订单配货&nbsp;<span class="icon-arrow-right">&#xe60f;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe604;</span>&nbsp;退款订单&nbsp;<span class="icon-arrow-right">&#xe60f;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe608;</span>&nbsp;退包订单&nbsp;<span class="icon-arrow-right">&#xe60f;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe613;</span>&nbsp;发票管理&nbsp;<span class="icon-arrow-right">&#xe60f;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </menu>
+        <div class="clear"></div>
+      </div>
+      <div class="wrapper">
+        <h3 class="content-title">退包订单查询 / 新增</h3>
+        <div class="content">
+          <aside class="mt-10">
+            <form class="frame-table" action="javascript:;" method="post">
+              <table class="table-info lh-30" width="100%">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="wd-90 fl">退包编号：</div>
+                      <input id="backpackNumber" type="text" name="backpackNumber" value="">
+                      <div class="clear"></div>
+                    </td>
+                    <td>
+                      <div class="wd-90 fl">订单号：</div>
+                      <input id="orderNumber" type="text" name="orderNumber" value="">
+                      <div class="clear"></div>
+                    </td>
+                    <td>
+                      <div class="wd-90 fl">退款时间：</div>
+                      <input id="date-star" type="text" name="date-star" value="请选择时间范围起始">&nbsp;-&nbsp;
+                      <input id="date-end" type="text" name="date-end" value="请选择时间范围结束">
+                      <div class="clear"></div>
+                    </td>
+                    <td>
+                      <button class="rank-btn" type="submit" value="查询">查询</button>
+                      <button class="rank-btn" type="reset" value="重置">重置</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="clear"></div>
+            </form>
+          </aside>
+          <section class="content-table">
+            <p><a href="javascript:;" class="btn">+新增</a></p>
+            <table class="table-zebra mt-10" width="100%">
+              <thead>
+                <tr>
+                  <th width="11.111%">退包编号</th>
+                  <th width="11.111%">订单号</th>
+                  <th width="11.111%">退包状态</th>
+                  <th width="11.111%">数量</th>
+                  <th width="11.111%">处理人</th>
+                  <th>创建时间</th>
+                  <th width="11.111%">快递公司</th>
+                  <th width="11.111%">运单号</th>
+                  <th width="11.111%">操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>D321456987</td>
+                  <td>D321456987</td>
+                  <td>已发货</td>
+                  <td>23</td>
+                  <td>大师兄</td>
+                  <td>
+                    <time>2017.07.26 11:30</time>
+                  </td>
+                  <td>顺丰</td>
+                  <td>1456987</td>
+                  <td class="td-operating">
+                    <a href="javascript:;">明细</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>D321456987</td>
+                  <td>D321456987</td>
+                  <td>已发货</td>
+                  <td>23</td>
+                  <td>大师兄</td>
+                  <td>
+                    <time>2017.07.26 11:30</time>
+                  </td>
+                  <td>顺丰</td>
+                  <td>1456987</td>
+                  <td class="td-operating">
+                    <a href="javascript:;">明细</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>D321456987</td>
+                  <td>D321456987</td>
+                  <td>已发货</td>
+                  <td>23</td>
+                  <td>大师兄</td>
+                  <td>
+                    <time>2017.07.26 11:30</time>
+                  </td>
+                  <td>顺丰</td>
+                  <td>1456987</td>
+                  <td class="td-operating">
+                    <a href="javascript:;">明细</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>D321456987</td>
+                  <td>D321456987</td>
+                  <td>已发货</td>
+                  <td>23</td>
+                  <td>大师兄</td>
+                  <td>
+                    <time>2017.07.26 11:30</time>
+                  </td>
+                  <td>顺丰</td>
+                  <td>1456987</td>
+                  <td class="td-operating">
+                    <a href="javascript:;">明细</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </body>
+  <script src="../js/global.js" charset="utf-8"></script>
+</html>

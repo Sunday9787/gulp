@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script  type="text/javascript" src="./lib/require.js"></script>
+    <!-- <script  type="text/javascript" src="../../lib/order.js"></script> -->
+    <script type="text/javascript">
+        require.config({
+            baseUrl: './js',
+            paths: {
+                "jquery": "jquery-1.10.2.min.js",
+                "Prop": "Prop.js",
+                "text": "text.js",
+            }
+        });
+    </script>
+    <title>RequireJS</title>
+</head>
+<body>
+    <p>require</p>
+    <a id="addExpressNumber" href="javascript:;">点击我弹层</a>
+    <script type="text/javascript">
+        require(['text', 'jquery', 'Prop'], function (text, $, Popup) {
+            console.log(text);
+            $('#addExpressNumber').on('click', function () {
+                var s = new Popup({
+                    type: 'html',
+                    title: '修改运单号',
+                    content: '<form action="javascript:;">'+
+                                '<table>'+
+                                    '<tr>'+
+                                        '<td class="pb-10">'+
+                                            '<label for="wulg">物流公司：</label>'+
+                                        '</td>'+
+                                        '<td class="pb-10">'+
+                                            '<select class="select wd-186 ml-10" name="" id="wulg">'+
+                                                '<option>天天</option>'+
+                                                '<option>顺丰</option>'+
+                                                '<option>申通</option>'+                                        
+                                            '</select>'+
+                                        '</td>'+
+                                    '</tr>'+
+                                    '<tr>'+
+                                        '<td class="pb-10">'+
+                                            '<label for="wul">物流单号：</label>'+
+                                        '</td>'+
+                                        '<td class="pb-10">'+
+                                            '<input class="input wd-278 ml-10" type="text" name="" id="wul">'+
+                                        '</td>'+
+                                    '</tr>'+
+                                    '<tr>'+
+                                        '<td>'+
+                                            '<label class="db" for="yf">'+
+                                                '<div class="fl">运</div>'+
+                                                '<div class="fr">费：</div>'+
+                                                '<div class="cb"></div>'+
+                                            '</label>'+
+                                        '</td>'+
+                                        '<td>'+
+                                            '<input class="input wd-186 ml-10 mr-10" type="text" name="" id="yf">元&nbsp;<span class="cl-rd">需要跟客服协商</span>'+
+                                        '</td>'+
+                                    '</tr>'+
+                                '</table>'+
+                            '</form>',
+                    algin: 'center',
+                    btn: ['确定', '取消'],
+                    callback: [function () {
+                        console.log('确定', this);
+                    },
+                    function () {
+                        console.log('取消')
+                        text('取消');
+                        this.close();
+                    }]
+                })
+            })
+        })
+    </script>
+</body>
+</html>

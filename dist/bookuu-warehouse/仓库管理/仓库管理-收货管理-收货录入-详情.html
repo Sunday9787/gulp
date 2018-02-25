@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/module.css">
+    <link rel="stylesheet" type="text/css" href="../css/component.css">
+    <script src="../js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/compontent.js" type="text/javascript" charset="utf-8"></script>
+    <!--[if lte IE 8]><script src="../lib/html5.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../lib/respond.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../lib/css3-mediaqueries.min.js" type="text/javascript" charset="utf-8"></script><![endif]-->
+  <title>收货管理-收货录入-收货查询-详情</title>
+</head>
+
+<body>
+  <div class="main clearfix">
+    <!-- 头部导航 -->
+    <nav class="navbar clearfix">
+      <div class="navbar-header">仓储管理系统</div>
+      <ul class="mainbav">
+        <li class="item">
+          <a href="javascript:;">订单管理</a>
+        </li>
+        <li class="item active">
+          <a href="javascript:;">仓库管理</a>
+        </li>
+        <li class="item">
+          <a href="javascript:;">统计报表</a>
+        </li>
+        <li class="item">
+          <a href="javascript:;">基本信息</a>
+        </li>
+        <li class="clear"></li>
+      </ul>
+      <div class="nav-user dropdown">
+        <a class="dropdown-toggle" data-type="click" role="button" href="javascript:;">神机网络</a>
+        <ul class="dropdown-menu">
+          <li class="item">
+            <a href="javascript:;">帮助中心</a>
+          </li>
+          <li class="item">
+            <a href="javascript:;">退出登陆</a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </nav>
+    <!-- 侧边栏菜单 -->
+    <div class="sidebar-left">
+      <menu>
+        <ul class="sidebar-left-menu">
+          <li class="item active">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe607;</span></div>&nbsp;收货管理&nbsp;
+                <div class="fr"><span class="icon-arrow-right">&#xe60e;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item active">
+                <a href="javascript:;">收货录入</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe60d;</span></div>&nbsp;退货管理&nbsp;
+                <div class="fr"><span class="icon-arrow-right">&#xe60f;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item">
+                <a href="javascript:;">退货查询</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe60b;</span></div>&nbsp;库存管理&nbsp;
+                <div class="fr"><span class="icon-arrow-right">&#xe60f;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item">
+                <a href="javascript:;">库存查询</a>
+              </li>
+              <li class="item">
+                <a href="javascript:;">架位调整</a>
+              </li>
+              <li class="item">
+                <a href="javascript:;">盘点</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </menu>
+      <div class="clear"></div>
+    </div>
+    <div class="wrapper">
+      <h3 class="content-title">收货查询 / 详情</h3>
+      <div class="content">
+        <aside class="content-table-info mt-10">
+            <table class="table-info" width="100%">
+              <tbody>
+                <tr>
+                  <td width="25%">
+                    <dfn>收货时间：</dfn>
+                    <time>12017-07-31  13:00</time>
+                  </td>
+                  <td width="25%">
+                    <dfn>收货单号：</dfn>21354698725
+                  </td>
+                  <td width="25%">
+                    <dfn>收货数量</dfn>450
+                  </td>
+                  <td width="25%">
+                    <dfn>收货状态：</dfn>已入库
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <dfn>发货方：</dfn>中信出版社
+                  </td>
+                  <td>
+                    <dfn>创建时间：</dfn>
+                    <time>12017-7-31 13:00</time>
+                  </td>
+                  <td colspan="2">
+                    <dfn>创建人：</dfn>大师兄
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </aside>
+        <section class="content-table">
+          <p class="mt-20">
+            <a href="javascript:;" class="btn btn-sm">+新增</a>
+            <label class="btn btn-sm">导入<input type="file" name="" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.shee" id=""></label>
+          </p>
+          <table class="mt-10" width="100%">
+            <thead>
+              <tr>
+                <th width="11%">商品代码</th>
+                <th width="11%">商品条码</th>
+                <th width="12%">商品名称</th>
+                <th width="11%">定价</th>
+                <th width="11%">发货数量</th>
+                <th width="11%">收货数量</th>
+                <th width="11%">破损数量</th>
+                <th width="11%">折扣</th>
+                <th width="11%">总金额</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>321456987</td>
+                <td>321456987</td>
+                <td>
+                  <div class="wd-100 ma tohd">交互设计精髓</div>
+                </td>
+                <td>25.6</td>
+                <td>1000</td>
+                <td>1000</td>
+                <td>0</td>
+                <td>50</td>
+                <td>1200.00</td>
+              </tr>
+              <tr>
+                <td>321456987</td>
+                <td>321456987</td>
+                <td>
+                  <div class="wd-100 ma tohd">交互设计精髓</div>
+                </td>
+                <td>25.6</td>
+                <td>1000</td>
+                <td>1000</td>
+                <td>0</td>
+                <td>50</td>
+                <td>1200.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</body>
+<script src="../js/global.js" charset="utf-8"></script>
+</html>

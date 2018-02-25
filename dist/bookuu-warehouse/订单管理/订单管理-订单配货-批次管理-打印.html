@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/module.css">
+    <link rel="stylesheet" type="text/css" href="../css/component.css">
+    <script src="../js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/compontent.js" type="text/javascript" charset="utf-8"></script>
+    <!--[if lte IE 8]><script src="../lib/html5.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../lib/respond.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../lib/css3-mediaqueries.min.js" type="text/javascript" charset="utf-8"></script><![endif]-->
+    <title>订单管理-订单配货-批次处理</title>
+  </head>
+
+  <body>
+    <div class="main clearfix">
+      <!-- 头部导航 -->
+      <nav class="navbar clearfix">
+        <div class="navbar-header">仓储管理系统</div>
+        <ul class="mainbav">
+          <li class="item active">
+            <a href="javascript:;">订单管理</a>
+          </li>
+          <li class="item">
+            <a href="javascript:;">仓库管理</a>
+          </li>
+          <li class="item">
+            <a href="javascript:;">统计报表</a>
+          </li>
+          <li class="item">
+            <a href="javascript:;">基本信息</a>
+          </li>
+          <li class="clear"></li>
+        </ul>
+        <div class="nav-user dropdown">
+          <a class="dropdown-toggle" data-type="click" role="button" href="javascript:;">神机网络</a>
+          <ul class="dropdown-menu">
+            <li class="item">
+              <a href="javascript:;">帮助中心</a>
+            </li>
+            <li class="item">
+              <a href="javascript:;">退出登陆</a>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </nav>
+      <!-- 侧边栏菜单 -->
+      <div class="sidebar-left">
+        <menu>
+          <ul class="sidebar-left-menu">
+            <li class="item active">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe603;</span>&nbsp;订单处理&nbsp;<span class="icon-arrow-right">&#xe60f;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item active">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe612;</span>&nbsp;订单配货&nbsp;<span class="icon-arrow-right">&#xe60f;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe604;</span>&nbsp;退款订单&nbsp;<span class="icon-arrow-right">&#xe60f;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe608;</span>&nbsp;退包订单&nbsp;<span class="icon-arrow-right">&#xe60f;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="pd-2008">
+                <a href="javascript:;">
+                  <span class="icon">&#xe613;</span>&nbsp;发票管理&nbsp;<span class="icon-arrow-right">&#xe60f;</span>
+                </a>
+              </div>
+              <ul class="list-item">
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+                <li class="item">
+                  <a href="javascript:;">订单处理</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </menu>
+        <div class="clear"></div>
+      </div>
+      <div class="wrapper">
+        <h3 class="content-title clearfix">批次管理&nbsp;/&nbsp;打印</h3>
+        <div class="content">
+          <aside class="frame-ranking mt-10 lh-30">
+            <table class="ranking-table" width="100%">
+              <tbody>
+                <tr>
+                  <td width="25%"><dfn>配货批次：</dfn>123141231241</td>
+                  <td width="25%"><dfn>订单数量：</dfn>123</td>
+                  <td width="25%"><dfn>配货状态：</dfn>正在配货</td>
+                  <td width="25%">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="clearfix">
+                    <div class="wd-90 fl">订单号：</div>
+                    <input id="orderNumber" type="text" name="orderNumber" value="">
+                    <div class="clear"></div>
+                  </td>
+                  <td class="clearfix">
+                    <div class="wd-90 fl">订单号：</div>
+                    <input id="logiNumber" type="text" name="logiNumber" value="">
+                    <div class="clear"></div>
+                  </td>
+                  <td class="ranking-radio">
+                    <form action="javascript:;" method="post">
+                      <label class="mr-10">
+                        <span class="icon-checkbox2">&#xe615;</span>
+                        <input type="radio" name="radio" value="面单">面单
+                      </label>
+                      <label class="mg-0010">
+                        <span class="icon-checkbox2">&#xe615;</span>
+                        <input type="radio" name="radio" value="小票">小票
+                      </label>
+                      <label class="mg-0010">
+                        <span class="icon-checkbox2">&#xe615;</span>
+                        <input type="radio" name="radio" value="发票">发票
+                      </label>
+                    </form>
+                  </td>
+                  <td class="ta-rt">
+                    <a href="javascript:;" class="btn">打印</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </aside>
+          <section class="content-table">
+            <form action="javascript:;" method="post">
+              <table class="checkbox-table" width="100%">
+                <thead>
+                  <tr>
+                    <th><label class="checkedAll">全选</label>&nbsp;/&nbsp;<label class="toggleChecked">返选</label></th>
+                    <th width="">格号</th>
+                    <th width="">序号</th>
+                    <th width="10%">订单号</th>
+                    <th width="14%">状态</th>
+                    <th width="14%">快递公司</th>
+                    <th width="14%">运单号</th>
+                    <th width="14%">是否开票</th>
+                    <th width="14%">已打印</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label>
+                        <span class="icon-checkbox">&#xe617;</span>
+                        <input type="checkbox" value="0">
+                      </label>
+                    </td>
+                    <td>01</td>
+                    <td>1</td>
+                    <td>23456789012334</td>
+                    <td>拣货完成</td>
+                    <td>顺丰</td>
+                    <td>995000892948</td>
+                    <td>是</td>
+                    <td>是</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>
+                        <span class="icon-checkbox">&#xe617;</span>
+                        <input type="checkbox" value="1">
+                      </label>
+                    </td>
+                    <td>01</td>
+                    <td>1</td>
+                    <td>23456789012334</td>
+                    <td>拣货完成</td>
+                    <td>顺丰</td>
+                    <td>995000892948</td>
+                    <td>是</td>
+                    <td>是</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>
+                        <span class="icon-checkbox">&#xe617;</span>
+                        <input type="checkbox" value="2">
+                      </label>
+                    </td>
+                    <td>01</td>
+                    <td>1</td>
+                    <td>23456789012334</td>
+                    <td>拣货完成</td>
+                    <td>顺丰</td>
+                    <td>995000892948</td>
+                    <td>是</td>
+                    <td>是</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>
+                        <span class="icon-checkbox">&#xe617;</span>
+                        <input type="checkbox" value="3">
+                      </label>
+                    </td>
+                    <td>01</td>
+                    <td>1</td>
+                    <td>23456789012334</td>
+                    <td>拣货完成</td>
+                    <td>顺丰</td>
+                    <td>995000892948</td>
+                    <td>是</td>
+                    <td>是</td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </section>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </body>
+  <script src="../js/compontent.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../lib/distpicker/distpicker.data.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../lib/distpicker/distpicker.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/global.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+  /*ranking-radio*/
+  $('.ranking-radio').on('click','input[type="radio"]',function(){
+    $(this).prev('span').removeClass('icon-checkbox2').addClass('icon-checkbox-checked').html('&#xe616;');
+    $('.ranking-radio input[type="radio"]').each(function(i, els) {
+      if(!$(els).is(':checked')) $(els).prev('span').removeClass('icon-checkbox-checked').addClass('icon-checkbox2').html('&#xe615;');
+    })
+  })
+
+  /*content-table checkbox*/
+  checkbox()
+  </script>
+</html>

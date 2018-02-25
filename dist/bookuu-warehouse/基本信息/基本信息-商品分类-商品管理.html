@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet" type="text/css" href="../css/module.css">
+  <link rel="stylesheet" type="text/css" href="../css/component.css">
+  <script src="../js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/compontent.js" type="text/javascript" charset="utf-8"></script>
+  <!--[if lte IE 8]><script src="../lib/html5.js" type="text/javascript" charset="utf-8">
+    </script> <script src="../lib/respond.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../lib/css3-mediaqueries.min.js" type="text/javascript" charset="utf-8"></script><![endif]-->
+  <title>基本信息-商品分类-商品管理</title>
+</head>
+
+<body>
+  <div class="main clearfix">
+    <!-- 头部导航 -->
+    <nav class="navbar clearfix">
+      <div class="navbar-header">仓储管理系统</div>
+      <ul class="mainbav">
+        <li class="item">
+          <a href="javascript:;">订单管理</a>
+        </li>
+        <li class="item">
+          <a href="javascript:;">仓库管理</a>
+        </li>
+        <li class="item">
+          <a href="javascript:;">统计报表</a>
+        </li>
+        <li class="item active">
+          <a href="javascript:;">基本信息</a>
+        </li>
+        <li class="clear"></li>
+      </ul>
+      <div class="nav-user dropdown">
+        <a class="dropdown-toggle" data-type="click" role="button" href="javascript:;">神机网络</a>
+        <ul class="dropdown-menu">
+          <li class="item">
+            <a href="javascript:;">帮助中心</a>
+          </li>
+          <li class="item">
+            <a href="javascript:;">退出登陆</a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </nav>
+    <!-- 侧边栏菜单 -->
+    <div class="sidebar-left">
+      <menu>
+        <ul class="sidebar-left-menu">
+          <li class="item">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe60a;</span>&nbsp;账户管理&nbsp;</div>
+                <div class="fr"><span class="icon-arrow-right">&#xe60e;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item">
+                <a href="javascript:;">用户管理</a>
+              </li>
+              <li class="item">
+                <a href="javascript:;">角色管理</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item active">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe614;</span>&nbsp;商品分类&nbsp;</div>
+                <div class="fr"><span class="icon-arrow-right">&#xe60f;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item active">
+                <a href="javascript:;">商品管理</a>
+              </li>
+              <li class="item">
+                <a href="javascript:;">分类管理</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe610;</span>&nbsp;仓库架位&nbsp;</div>
+                <div class="fr"><span class="icon-arrow-right">&#xe60f;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item">
+                <a href="javascript:;">仓库列表</a>
+              </li>
+              <li class="item active">
+                <a href="javascript:;">仓区列表</a>
+              </li>
+              <li class="item">
+                <a href="javascript:;">架位列表</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe609;</span>&nbsp;供应商管理&nbsp;</div>
+                <div class="fr"><span class="icon-arrow-right">&#xe60f;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item">
+                <a href="javascript:;">供应商管理</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </menu>
+      <div class="clear"></div>
+    </div>
+    <div class="wrapper">
+      <h3 class="content-title">分类管理</h3>
+      <div class="content">
+        <aside class="frame-ranking mt-10">
+          <form action="javascript:;">
+            <table class="ranking-table wd-100p lh-30">
+              <tbody>
+                <tr>
+                  <td width="25%">
+                    <div class="wd-90 fl">商品代码：</div>
+                    <input id="" type="text" name="" value="">
+                    <div class="clear"></div>
+                  </td>
+                  <td width="25%">
+                    <div class="wd-90 fl">商品条码：</div>
+                    <input type="text" name="" value="">
+                    <div class="clear"></div>
+                  </td>
+                  <td width="25%">
+                    <div class="wd-90 fl">分类代码：</div>
+                    <input type="text" name="" value="">
+                    <div class="clear"></div>
+                  </td>
+                  <td width="25%">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="clearfix" colspan="3">
+                    <div class="wd-90 fl">创建时间：</div>
+                    <input id="date-star" type="text" name="date-star" value="请选择时间范围起始">&nbsp;-&nbsp;
+                    <input id="date-end" type="text" name="date-end" value="请选择时间范围结束">
+                    <div class="clear"></div>
+                  </td>
+                  <td class="ta-ct">
+                    <button class="rank-btn" type="submit" value="查询">查询</button>
+                    <button class="rank-btn" type="reset" value="重置">重置</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </aside>
+        <section>
+          <p><a href="javascript:;" class="btn">+新增</a><a href="javascript:;" class="btn J_prpoup">导入</a></p>
+          <table class="content-table table-zebra mt-10" width="100%">
+            <thead>
+              <tr>
+                <th width="12.5%">封面图片</th>
+                <th width="12.5%">书号</th>
+                <th width="12.5%">书名</th>
+                <th width="12.5%">定价</th>
+                <th width="12.5%">分类</th>
+                <th width="12.5%">修改时间</th>
+                <th width="12.5%">状态</th>
+                <th width="12.5%">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="layzload" data-size="100" data-src="http://bnmppic.bookuu.com/goods/16/22/04/A105512.jpg"></div>
+                </td>
+                <td>98454545777</td>
+                <td>
+                  <div class="wd-150 ma to-hd">行走的人生</div>
+                </td>
+                <td>￥49.99</td>
+                <td>互联网</td>
+                <td>2017-08-21 10:32</td>
+                <td>可用</td>
+                <td class="td-operating">
+                  <a href="javascript:;">编辑</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</body>
+<script src="../js/global.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $('.layzload').layzload({imgshow:300})
+
+  // 导入收货列表
+  var J_fileTemplate = {
+    'prop-title': '导入收货列表',
+    'prop-content': '<form class="prop-box-from" action="index.html" method="post">'+
+      '<table width="100%">'+
+        '<tbody>'+
+          '<tr>'+
+            '<td>选择表格</td>'+
+            '<td>'+
+              '<label class="btn-simple fl">选择文件<input type="file" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.shee" name="file" id=""></label>'+
+              '<a href="javascript:;" class="btn fr">确认导入</a>'+
+              '<div class="clear"></div>'+
+            '</td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td valign="top">导入结果</td>'+
+            '<td>'+
+              '<textarea class="wd-100p" id="status" name="status" rows="5" readonly>上传中... 上传成功！</textarea>'+
+            '</td>'+
+          '</tr>'+
+        '</tbody>'+
+      '</table>'+
+    '</form>'
+  }
+  $('.content').on('click', '.J_prpoup', function () {
+    PropUp({
+      'propupContent': J_fileTemplate['prop-content'],
+      'propupTitle': J_fileTemplate['prop-title']
+    },'', function (result) {
+      /* 返回布尔值 */
+      console.log(result);
+      // 推荐用 .serializeArray() 方法获得表单元素
+      if(!result) return;
+    })
+  })
+</script>
+
+</html>

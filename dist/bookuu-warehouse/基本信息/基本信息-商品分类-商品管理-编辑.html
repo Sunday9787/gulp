@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet" type="text/css" href="../css/module.css">
+  <link rel="stylesheet" type="text/css" href="../css/component.css">
+  <script src="../js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/compontent.js" type="text/javascript" charset="utf-8"></script>
+  <!--[if lte IE 8]><script src="../lib/html5.js" type="text/javascript" charset="utf-8">
+    </script> <script src="../lib/respond.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../lib/css3-mediaqueries.min.js" type="text/javascript" charset="utf-8"></script><![endif]-->
+  <!-- 上传文件 -->
+  <link rel="stylesheet" type="text/css" href="../lib/webuploader/webuploader.css">
+  <script src="../lib/webuploader/webuploader.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/mywebuploader.js" type="text/javascript" charset="utf-8"></script>
+  <title>仓库管理-库存管理-库存查询</title>
+</head>
+
+<body>
+  <div class="main clearfix">
+    <!-- 头部导航 -->
+    <nav class="navbar clearfix">
+      <div class="navbar-header">仓储管理系统</div>
+      <ul class="mainbav">
+        <li class="item">
+          <a href="javascript:;">订单管理</a>
+        </li>
+        <li class="item">
+          <a href="javascript:;">仓库管理</a>
+        </li>
+        <li class="item">
+          <a href="javascript:;">统计报表</a>
+        </li>
+        <li class="item active">
+          <a href="javascript:;">基本信息</a>
+        </li>
+        <li class="clear"></li>
+      </ul>
+      <div class="nav-user dropdown">
+        <a class="dropdown-toggle" data-type="click" role="button" href="javascript:;">神机网络</a>
+        <ul class="dropdown-menu">
+          <li class="item">
+            <a href="javascript:;">帮助中心</a>
+          </li>
+          <li class="item">
+            <a href="javascript:;">退出登陆</a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </nav>
+    <!-- 侧边栏菜单 -->
+    <div class="sidebar-left">
+      <menu>
+        <ul class="sidebar-left-menu">
+          <li class="item active">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe60a;</span>&nbsp;账户管理&nbsp;</div>
+                <div class="fr"><span class="icon-arrow-right">&#xe60e;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item active">
+                <a href="javascript:;">用户管理</a>
+              </li>
+              <li class="item">
+                <a href="javascript:;">角色管理</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe614;</span>&nbsp;商品分类&nbsp;</div>
+                <div class="fr"><span class="icon-arrow-right">&#xe60f;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item active">
+                <a href="javascript:;">商品管理</a>
+              </li>
+              <li class="item">
+                <a href="javascript:;">分类管理</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe610;</span>&nbsp;仓库架位&nbsp;</div>
+                <div class="fr"><span class="icon-arrow-right">&#xe60f;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item">
+                <a href="javascript:;">仓库列表</a>
+              </li>
+              <li class="item active">
+                <a href="javascript:;">仓区列表</a>
+              </li>
+              <li class="item">
+                <a href="javascript:;">架位列表</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="pd-2008">
+              <a href="javascript:;">
+                <div class="fl"><span class="icon">&#xe609;</span>&nbsp;供应商管理&nbsp;</div>
+                <div class="fr"><span class="icon-arrow-right">&#xe60f;</span></div>
+                <div class="clear"></div>
+              </a>
+            </div>
+            <ul class="list-item">
+              <li class="item">
+                <a href="javascript:;">供应商管理</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </menu>
+      <div class="clear"></div>
+    </div>
+    <div class="wrapper">
+      <h3 class="content-title">商品管理</h3>
+      <div class="content">
+        <p><a href="javascript:window.history.go(-1);" class="btn">返回</a></p>
+        <aside class="product-editor mt-20">
+          <table class="content-table product-editor-menu" width="100%">
+            <thead>
+              <tr>
+                <th class="item" width="9.09%"><a href="javascript:;"><span class="icon-round">&#xe61c;</span>封面图片</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>通用信息</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>编辑推荐</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>内容简介</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>作者推荐</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>精彩书评</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>目录</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>精彩书摘</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>前言/序言</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>商品详情图</a></th>
+                <th class="item" width="9.09%"><a class="wrong" href="javascript:;"><span class="icon-round">&#xe61c;</span>产品特色</a></th>
+              </tr>
+            </thead>
+          </table>
+          <ul class="side-wrapper mt-30">
+            <li class="item">
+              <div class="bd-1-e8 pd-1016">
+                <h5>
+                  封面图片（第一张图片为封面立体图，最多添加五张）
+                  <label class="btn" id="picke_cover">选择文件</label>
+                </h5>
+                <!--用来存放文件信息-->
+                <ul id="cover_pic" class="uploader-list mt-10 webuploader clearfix"></ul>
+              </div>
+              <p>
+                <a href="javascript:;" id="upload_cover" class="btn">保存</a>
+                <a href="javascript:;" id="stop_cover" class="btn">取消</a>
+              </p>
+            </li>
+            <li class="item">
+              <form class="product-editor-form" action="javascript:;" method="post">
+                <table class="lh-30" width="100%">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>商品名称：</dfn>
+                          <span class="icon-round">&#xe61c;</span>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>副标题：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>丛书名：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>定价：</dfn>
+                          <span class="icon-round">&#xe61c;</span>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>ISBN：</dfn>
+                          <span class="icon-round">&#xe61c;</span>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>作者：</dfn>
+                          <span class="icon-round">&#xe61c;</span>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>出版社：</dfn>
+                          <span class="icon-round">&#xe61c;</span>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>版次：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>印次：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>出版时间：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>印刷时间：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>开本：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" value="">
+                        <div class="clear"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>页数：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" placeholder="0.00" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>包装：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" placeholder="0.00" value="">
+                        <div class="clear"></div>
+                      </td>
+                      <td>
+                        <div class="editer-name-input wd-90 ta-rt fl">
+                          <dfn>套装数量：</dfn>
+                        </div>
+                        <input class="fl editor-input" type="text" name="" placeholder="0.00" value="">
+                        <div class="clear"></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </form>
+              <p><a href="javascript:;" class="btn">保存</a><a href="javascript:;" class="btn muted">取消</a></p>
+            </li>
+            <li class="item">
+              <form class="product-editor-form" action="javascript:;">
+                <textarea class="editor-textarea wd-70p fl mr-10" rows="20"></textarea>
+                <p class="cl-rd oh">填写的内容不要包含"最"等敏感词</p>
+                <div class="clear"></div>
+              </form>
+              <p>
+                <a href="javascript:;" id="upload" class="btn">保存</a>
+                <a href="javascript:;" id="stopupload" class="btn">取消</a>
+              </p>
+            </li>
+            <li class="item">
+              <form class="product-editor-form" action="javascript:;">
+                <textarea class="editor-textarea wd-70p fl mr-10" rows="20"></textarea>
+                <p class="cl-rd oh">填写的内容不要包含"最"等敏感词</p>
+                <div class="clear"></div>
+              </form>
+              <p>
+                <a href="javascript:;" id="upload" class="btn">保存</a>
+                <a href="javascript:;" id="stopupload" class="btn">取消</a>
+              </p>
+            </li>
+            <li class="item">
+              <form class="product-editor-form" action="javascript:;">
+                <textarea class="editor-textarea wd-70p fl mr-10" rows="20"></textarea>
+                <p class="cl-rd oh">填写的内容不要包含"最"等敏感词</p>
+                <div class="clear"></div>
+              </form>
+              <p>
+                <a href="javascript:;" id="upload" class="btn">保存</a>
+                <a href="javascript:;" id="stopupload" class="btn">取消</a>
+              </p>
+            </li>
+            <li class="item">
+              <form class="product-editor-form" action="javascript:;">
+                <textarea class="editor-textarea wd-70p fl mr-10" rows="20"></textarea>
+                <p class="cl-rd oh">填写的内容不要包含"最"等敏感词</p>
+                <div class="clear"></div>
+              </form>
+              <p>
+                <a href="javascript:;" id="upload" class="btn">保存</a>
+                <a href="javascript:;" id="stopupload" class="btn">取消</a>
+              </p>
+            </li>
+            <li class="item">
+              <form class="product-editor-form" action="javascript:;">
+                <textarea class="editor-textarea wd-70p fl mr-10" rows="20"></textarea>
+                <p class="cl-rd oh">填写的内容不要包含"最"等敏感词</p>
+                <div class="clear"></div>
+              </form>
+              <p>
+                <a href="javascript:;" id="upload" class="btn">保存</a>
+                <a href="javascript:;" id="stopupload" class="btn">取消</a>
+              </p>
+            </li>
+            <li class="item">
+              <form class="product-editor-form" action="javascript:;">
+                <textarea class="editor-textarea wd-70p fl mr-10" rows="20"></textarea>
+                <p class="cl-rd oh">填写的内容不要包含"最"等敏感词</p>
+                <div class="clear"></div>
+              </form>
+              <p>
+                <a href="javascript:;" id="upload" class="btn">保存</a>
+                <a href="javascript:;" id="stopupload" class="btn">取消</a>
+              </p>
+            </li>
+            <li class="item">
+              <form class="product-editor-form" action="javascript:;">
+                <textarea class="editor-textarea wd-70p fl mr-10" rows="20"></textarea>
+                <p class="cl-rd oh">填写的内容不要包含"最"等敏感词</p>
+                <div class="clear"></div>
+              </form>
+              <p>
+                <a href="javascript:;" id="upload" class="btn">保存</a>
+                <a href="javascript:;" id="stopupload" class="btn">取消</a>
+              </p>
+            </li>
+            <li class="item active">
+              <div class="bd-1-e8 pd-1016">
+                <h5>
+                  详情图片<small>（为了更好的展示商品，建议您添加详情图片）</small>
+                  <label class="btn" id="proddets_picke">选择文件</label>
+                </h5>
+                <p class="cl-rd">宽790*高（不限），大小不超过2mb</p>
+                <p class="cl-rd">主要的页面逻辑：先展示书的卖点信息，其次商品的基本信息，再次精彩内文详情</p>
+                <!--用来存放文件信息-->
+                <ul id="proddets_pic" class="uploader-list webuploader mt-10 clearfix"></ul>
+              </div>
+              <p>
+                <a href="javascript:;" id="proddets_upload" class="btn">保存</a>
+                <a href="javascript:;" id="proddets_stop" class="btn">取消</a>
+              </p>
+            </li>
+            <li class="item">
+              <form class="product-editor-form" action="javascript:;">
+                <textarea class="editor-textarea wd-70p fl mr-10" rows="20"></textarea>
+                <p class="cl-rd oh">填写的内容不要包含"最"等敏感词</p>
+                <div class="clear"></div>
+              </form>
+              <p>
+                <a href="javascript:;" id="upload" class="btn">保存</a>
+                <a href="javascript:;" id="stopupload" class="btn">取消</a>
+              </p>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</body>
+<script src="../js/global.js" type="text/javascript"></script>
+<script type="text/javascript">
+  // 商品信息编辑选项卡
+  $('.product-editor-menu').on('click', '.item', function() {
+    var _index = $(this).index()
+    $('.side-wrapper>.item').eq(_index).addClass('active').siblings().removeClass('active')
+  })
+
+  // 图片上传
+  // 插件地址 http://fex.baidu.com/webuploader/doc
+  // 实例化对象
+  var BASE_URL = '../lib/';
+
+  // 封面图片上传
+  var cover_pic = WebUpload({
+    base_url: BASE_URL, // 基本url
+    WebUploadId: "#cover_pic", //  上传容器ID
+    uploadUrl: "../upload_file.php", // 上传url
+    upload: "#upload_cover", // 上传按钮
+    stopUpload: "#stop_cover", // 取消上传按钮
+    picke: "#picke_cover", // 文件选择按钮
+    maxSize: 2, // 最大单个文件大小 2 mb
+    maxFileLength: 5,
+    thumbnailSize: 100,
+    // 添加控件编号，从而区分是哪个控件上传的 ，也可以添加其他值以供后台获取
+    // http://fex-team.github.io/webuploader/doc/index.html#WebUploader_Uploader_options
+    formData: {
+      'token': 'cover_pic'
+    },
+    success: function(response) {
+      console.log(response)
+    },
+    error: '6666'
+  })
+
+  // 产品详情图 上传
+  var prodet_pic = WebUpload({
+    base_url: BASE_URL, // 基本url
+    WebUploadId: "#proddets_pic", //  上传容器ID
+    uploadUrl: "../upload_file.php", // 上传url
+    upload: "#proddets_upload", // 上传按钮
+    stopUpload: "#proddets_stop", // 取消上传按钮
+    picke: "#proddets_picke", // 文件选择按钮
+    maxSize: 2, // 最大单个文件大小 2 mb
+    maxFileLength: 5,
+    thumbnailSize: 100,
+    formData: {
+      'token': 'prodet_pic'
+    },
+    success: function(response) {
+      console.log(response)
+    },
+    error: function(error) {
+      console.log(error)
+    }
+  })
+</script>
+
+</html>
